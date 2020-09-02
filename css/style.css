@@ -1,0 +1,416 @@
+html {
+    scroll-behavior: smooth;
+  }
+#navigation-menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 30px;
+}
+
+.logo {
+    flex: 1
+}
+
+nav {
+    flex: 8
+}
+
+#navigation-menu {
+    background: #fff;
+    -webkit-box-shadow: 0px 8px 18px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 8px 18px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 8px 18px -1px rgba(0,0,0,0.75);
+    z-index: 3;
+}
+.navbar-brand img {
+    width: 50px;
+    height: 50px;
+}
+
+#navigation-menu.fixed {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    animation: slideTop 0.5s ease-in 1 forwards;
+    -webkit-animation: slideTop 0.3s ease-in 1 forwards;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex !important;
+}
+
+@keyframes slideTop {
+    from { top: -100px; opacity: 0; }
+    to {top: 0px; opacity: 1;}
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0px;
+}
+.menu-item {
+    margin-right: 30px;
+    padding: 10px;
+}
+.menu-item a {
+    text-decoration: none;
+    color: #000;
+}
+
+.toggle {
+    display: none;
+}
+
+#hero-section {
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    padding: 20px 0px 20px;
+    background: url('../images/Screenshot.jpg') center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 70vh;
+}
+
+.polygon {
+    clip-path: polygon(0 0, 100% 0%, 70% 100%, 0% 100%);
+    background: rgba(80, 175, 254,0.9);
+    padding: 10vh 100px
+}
+
+#home-page-about-preview {
+    height: 55vh;
+}
+
+#home-page-about-preview > div, #home-page-about-preview > div div{
+    height: auto;
+}
+
+#home-page-about-preview .preview-img {
+    margin-right: -100px;
+    border: 8px solid rgb(46, 154, 243);
+    z-index: 3;
+    height: 100%;
+}
+
+.home-page-about-preview-left {
+    padding: 20px 20px
+}
+
+#home-page-about-preview img {
+    width: 100%;
+    height: 100%;
+}
+
+.home-page-about-preview-right {
+    background:#50AFFE;
+    z-index: -1;
+    padding: 30px 10px 10px 150px !important;
+    color: #fff;
+}
+
+#home-section-cards .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.preview-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    -webkit-box-shadow: 0px 8px 18px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 8px 18px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 8px 18px -1px rgba(0,0,0,0.75);
+}
+
+.preview-card h4 {
+    background: #50AFFE;
+    padding: 20px 20px;
+    position: relative;
+}
+
+
+.preview-card h4::before {
+    content: '';
+    position: absolute;
+    transform: translateX(-50%);
+    border-left:20px solid transparent;
+    border-right:20px solid transparent;
+    border-bottom:20px solid transparent;
+    border-top:20px solid #50AFFE;
+    bottom: -40px;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.preview-card p {
+    padding: 20px 20px;
+}
+
+.prev-image-1 {
+    background: url('../images/home.jpeg') center no-repeat !important;
+    background-attachment: fixed;
+    height: 130px;
+}
+
+.prev-image-2 {
+    background: url('../images/extension.jpg') center no-repeat !important;
+    background-attachment: fixed;
+    height: 130px;
+}
+
+.prev-image-3 {
+    background: url('../images/sourcing.jpg') center no-repeat !important;
+    height: 130px;
+}
+.prev-image-4 {
+    background: url('../images/apartment.png') center no-repeat !important;
+    height: 130px;
+}
+.prev-image-5 {
+    background: url('../images/export.jpg') center no-repeat !important;
+    height: 130px;
+}
+#footer {
+    background: #50AFFE;
+}
+/* about page */
+#about {
+    background: url('../images/home.jpg') center no-repeat !important;
+    background-size: cover !important;
+}
+
+.abt {
+    display: flex;
+}
+.abt div {
+    flex: 1;
+    margin: 10px;
+}
+.about-content {
+    background: rgba(255,255,255,0.9) ;
+}
+
+/* services page*/
+#services {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.service-card {
+    background: #50AFFE;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 50px;
+    background: #50AFFE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -60px;
+}
+#contact {
+    position: relative;
+}
+#contact > div {
+    z-index: 999;
+}
+.contact-form-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/home.jpg') center no-repeat;
+    background-size:cover;
+    border: 2px solid #fff
+
+}
+
+#contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    background: url('../images/home.jpg') center no-repeat;
+    background-size:cover;
+    z-index: -1;
+}
+
+.contact-form-right-platforms {
+    padding: 50px 50px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 8px;
+}
+
+.wpforms-submit {
+    width: 100% !important;
+    color:#fff !important;
+    border: none !important;
+    background: #333 !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    border-radius: 6px !important;
+}
+
+@media(max-width: 990px) {
+    #services {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 768px) {
+    .logo a {
+        float: none !important;
+    }
+    .navbar ul{
+        flex-direction: column;
+        margin-left: 0 !important;
+    }
+    #hero-section {
+        padding: 0px !important;
+    }
+    .polygon h1 {
+        font-size: 26px;
+    }
+
+    .toggle {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        margin-right: 20px;
+        z-index: 10000;
+        cursor: pointer;
+        position: absolute;
+        left: 10px;
+        top: 10px
+     }
+    .toggle div {
+        width: 20px;
+        height: 3px;
+        background-color: #50AFFE;
+        margin: 2px 0px 2px 0px;
+        border-radius: 12px;
+        padding: 0px;
+        transition: 0.5s ease-in-out;
+        z-index: 10000;
+
+    }
+    
+    .toggle.active div:first-child{
+        transform: rotate(-45deg) translate(-6px, 0px);
+    }
+    .toggle.active div:nth-child(2){
+        display: none;
+    }
+    
+    .toggle.active div:last-child{
+        transform: rotate(45deg) translate(-5px, 1px);
+    }
+
+    #navigation-menu {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 280px;
+        background: #fff;
+        z-index: 9999;
+        position: fixed;
+        left: 0;
+        top: 0;
+        padding-top: 40px;
+        margin-left: -300px;
+        transition: 0.5s ease-in-out;
+    }
+
+    #navigation-menu.fixed {
+        position: relative;
+    }
+
+    #navigation-menu.active {
+        margin-left: 0px;
+    }
+
+    #navigation-menu .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+        list-style: none;
+        padding: 0px;
+    }
+    .menu-item {
+        padding: 10px;
+    }
+
+    #hero-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .polygon {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+        background: rgba(0,0,0,0.6);
+        color: #fff;
+        padding: 10vh 20px
+    }
+
+    #home-page-about-preview {
+        height: auto;
+    }
+
+    #home-page-about-preview > div div{
+    height: auto;
+    }
+    
+    #home-page-about-preview .preview-img {
+        margin-right: 0px;
+        border: 8px solid rgb(46, 154, 243);
+        z-index: 3;
+    }
+    .home-page-about-preview-right {
+        background:#50AFFE;
+        padding: 10px !important;
+        color: #fff;
+    }
+
+    #home-section-cards .container {
+        grid-template-columns: 1fr;
+    }
+
+    #services {
+        grid-template-columns: 1fr;
+    }
+
+    .abt {
+        flex-direction: column;
+    }
+    .abt div {
+        margin: 0px;
+    }
+    
+}
