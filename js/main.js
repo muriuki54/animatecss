@@ -10,7 +10,7 @@ $(document).ready(() => {
         $(window).on('scroll', function() {
             st = $(this).scrollTop();
             if(st < lastScrollTop && $(window).width() > 768) {
-                console.log('up 1');
+                //console.log('up 1');
                 $('#navigation-menu').addClass('fixed')
     
             }
@@ -31,3 +31,36 @@ $(document).ready(() => {
 
 
  //element.classList.add('animate__animated', 'animate__bounceOutLeft');
+
+ const cards = document.querySelectorAll('.preview-card')
+ const aboutLeft = document.querySelector('.home-page-about-preview-left')
+ const aboutRight = document.querySelector('.home-page-about-preview-right')
+
+ const options = { threshold: 0.2 }
+
+ const observer = new IntersectionObserver(checkIntersection, options)
+
+ function checkIntersection(entries) {
+    entries.forEach((entry) => {
+        if(entry.isIntersecting) {
+            if(entry.target.classList.contains('home-page-about-preview-right') > 0) entry.target.classList.add('animate__animated','animate__slideInRight')
+            entry.target.classList.add('animate__animated','animate__slideInLeft')
+            console.log(entry.target.classList)
+        }
+    })
+ }
+
+ cards.forEach((card) => {
+     observer.observe(card)
+ })
+ observer.observe(aboutLeft)
+observer.observe(aboutRight)
+//  setTimeout(() => {
+//      cards.forEach(card => {
+//          if(card.classList.contains('animate__animated','animate__slideInLeft')) {
+//              card.classList.remove('animate__animated','animate__slideInLeft')
+//              //card.classList.remove('animate__slideInLeft')
+//              console.log('has classes')
+//          }
+//      })
+//  }, 2000);

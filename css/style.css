@@ -1,6 +1,12 @@
 html {
     scroll-behavior: smooth;
-  }
+}
+
+:root {
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
+}
+
 #navigation-menu {
     display: flex;
     justify-content: space-around;
@@ -72,7 +78,7 @@ nav {
     background: url('../images/Screenshot.jpg') center no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 70vh;
+    height: 60vh;
 }
 
 .polygon {
@@ -142,9 +148,13 @@ nav {
     border-right:20px solid transparent;
     border-bottom:20px solid transparent;
     border-top:20px solid #50AFFE;
-    bottom: -40px;
+    bottom: -30px;
     transform: translateX(-50%);
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
 }
 
 .preview-card p {
