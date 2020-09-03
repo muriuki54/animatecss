@@ -43,7 +43,12 @@ $(document).ready(() => {
  function checkIntersection(entries) {
     entries.forEach((entry) => {
         if(entry.isIntersecting) {
-            if(entry.target.classList.contains('home-page-about-preview-right') > 0) entry.target.classList.add('animate__animated','animate__slideInRight')
+            entry.target.style.visibility = 'visible'
+            if(entry.target.classList.contains('home-page-about-preview-right')){ 
+                entry.target.classList.add('animate__animated','animate__slideInRight')
+            } else if(entry.target.classList.contains('preview-card')) {
+                entry.target.classList.add('animate__animated','animate__slideInUp')   
+            }
             entry.target.classList.add('animate__animated','animate__slideInLeft')
             console.log(entry.target.classList)
         }
@@ -53,7 +58,7 @@ $(document).ready(() => {
  cards.forEach((card) => {
      observer.observe(card)
  })
- observer.observe(aboutLeft)
+observer.observe(aboutLeft)
 observer.observe(aboutRight)
 //  setTimeout(() => {
 //      cards.forEach(card => {

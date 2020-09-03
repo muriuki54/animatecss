@@ -103,6 +103,9 @@ nav {
 }
 
 .home-page-about-preview-left {
+    /**********************/
+    visibility: hidden;
+    /**********************/
     padding: 20px 20px
 }
 
@@ -112,6 +115,9 @@ nav {
 }
 
 .home-page-about-preview-right {
+    /**********************/
+    visibility: hidden;
+    /**********************/
     background:#50AFFE;
     z-index: -1;
     padding: 30px 10px 10px 150px !important;
@@ -125,6 +131,10 @@ nav {
 }
 
 .preview-card {
+    /**********************/
+    visibility: hidden;
+    /**********************/
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
